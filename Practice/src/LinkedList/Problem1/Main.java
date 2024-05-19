@@ -1,25 +1,9 @@
 package LinkedList.Problem1;
 
-class Node {
-    int data;
-    Node next;
-
-    public Node(int data){
-        this.data = data;
-        this.next = null;
-    }
-}
+import LinkedList.Node;
+import LinkedList.Util.AppUtil;
 
 public class Main {
-
-    private static void printLinkedList(Node head){
-        Node temp = head;
-
-        while(temp != null){
-            System.out.println(temp.data);
-            temp = temp.next;
-        }
-    }
 
     private static Node insertAtTheBeginning(Node head, int data){
         Node newHead = new Node(data);
@@ -47,15 +31,15 @@ public class Main {
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
 
-        printLinkedList(head);
+        AppUtil.printLinkedList(head);
 
         Node newHead = insertAtTheBeginning(head,5);
         System.out.println("============");
-        printLinkedList(newHead);
+        AppUtil.printLinkedList(newHead);
 
         insertAtTheEnd(newHead,50);
         System.out.println("============");
-        printLinkedList(newHead);
+        AppUtil.printLinkedList(newHead);
 
     }
 
