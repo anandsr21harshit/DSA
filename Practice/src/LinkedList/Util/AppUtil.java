@@ -11,6 +11,8 @@ public class AppUtil {
         while(temp != null){
             if(lengthOfLinkedList(head) == 1){
                 sbf.append(temp.data);
+                temp = temp.next;
+                break;
             }
             if(temp.next == null){
                 sbf.append(temp.data);
